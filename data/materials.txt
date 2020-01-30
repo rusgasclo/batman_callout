@@ -1,0 +1,74 @@
+
+
+BEGIN Object     
+    Name                 Batmobile
+    MoveSpeedFactor	1
+    MaxStackSize         -1
+    Width                2 
+    Height               2
+    RenderDepth          3 
+    NumSlots             1
+    Sprite               Batmobile
+    SpriteScale          1.4
+    Properties		 Scripted
+Properties           Entity
+Properties           Vehicle
+	BEGIN	Sprite		 x 0 y 0 w 4 h 4 RotateType 0
+BEGIN	Marker	 x 1  y 1  orientation.x 0.0000000	orientation.y 0.0000000	 Index 0  END	
+END
+END
+
+BEGIN Object     
+    Name                 Batman 
+    MoveSpeedFactor      0.500000  
+    Toughness            60.0000
+    MaxStackSize         -1  
+    RenderDepth          2  
+    ViewRange            12
+    BlockedBy            Wall   
+    Sprite               Batman  
+   Properties           Entity
+    Properties           DoesNotTire
+    Properties		 Scripted
+	BEGIN	Sprite		 x 4 y 0 w 2.5 h 3 RotateType 3
+	END
+END
+
+BEGIN Object     
+    Name                 DummyBatman 
+    Properties		 Scripted
+	BEGIN	Sprite		 x 4 y 0 w 2.5 h 3 RotateType 3
+	END
+END
+
+BEGIN Object     
+    Name                 Bat_Signal 
+    Toughness            60.0000  
+    RenderDepth          2  
+    BlockedBy            Wall  
+    BlockedBy            StaticObject  
+    BlockedBy            UtilityStation  
+   	Sprite               Bat Signal
+	SpriteScale          1.4
+   	Properties		 Scripted
+	Properties            StaticObject
+	Properties            Electrical
+	Groups	MustBeOutdoors 
+	MadeOf 	SolidMetal
+SpriteVariants 2
+	BEGIN	Sprite		 x 12 y 0 w 4 h 4 RotateType 4
+	END
+	BEGIN	Sprite		 x 16 y 0 w 4 h 4 RotateType 4
+	END
+END
+
+BEGIN Callout  
+    Name                 Batman  
+    Cost                 -1
+    MaxNumber            1 
+    Vehicle               Batmobile
+    NumEntities           1
+    Entity                Batman
+    BEGIN	Sprite		 x 4 y 0 w 2.5 h 3 END
+	
+END

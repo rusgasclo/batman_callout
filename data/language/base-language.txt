@@ -1,0 +1,14 @@
+
+object_Batman		Batman
+object_DummyBatman		Batman
+object_Batmobile	Batmobile
+object_Bat_Signal Bat Signal
+
+interfacecallout_Batman		Batman
+
+tooltip_button_Leathality_Pacify Pacify
+tooltip_button_Leathality_Maim Maim
+tooltip_button_Leathality_Kill Kill
+tooltip_button_Leathality_Caption Leathality:
+tooltip_spacer_Caption =========
+tooltip_button_Cancel_Callout Cancel Callout
